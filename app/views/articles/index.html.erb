@@ -1,0 +1,36 @@
+
+<div class="w3-container w3-red"><h1>Listing articles</h1></div>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><div class="w3-round-xxlarge w3-blue"><%= article.title %></td></div>
+      <td><div class="w3-panel w3-blue w3-round-xlarge"><% article.text %></td></div>
+      <td> <p><button class="w3-button w3-black w3-round-xxlarge"><%= link_to 'Show', article_path(article) %></button></p></td>
+      <td> <p><button class="w3-button w3-black w3-round-xxlarge"><%= link_to 'Edit', edit_article_path(article) %></button></p></td>
+      <td> <p><button class="w3-button w3-black w3-round-xxlarge"><%= link_to 'Destroy', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></button></p></td>
+    </tr>
+  <% end %>
+</table>
+
+ <p><button class="w3-button w3-black w3-round-xxlarge"><%= link_to 'Back', articles_path %></button></p>
+ <p><button class="w3-button w3-red w3-round-xxlarge"><%= link_to 'Home', root_path %></button></p>
+
+
+
+  
+
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.w3-btn {width:10px;}
+</style>
