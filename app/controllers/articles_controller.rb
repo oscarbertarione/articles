@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
- http_basic_authenticate_with name: "oscar", password: "1383", except: [:index, :show]
+ #http_basic_authenticate_with name: "oscar", password: "1383", except: [:index, :show]
 
 
 
